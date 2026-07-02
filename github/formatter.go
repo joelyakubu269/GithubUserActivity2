@@ -4,9 +4,9 @@ import (
 	"fmt"
 )
 
-func Formatter(events []Event) error {
+func Formatter(events []Event) (error, string) {
 	if len(events) == 0 {
-		return fmt.Errorf("no activity found")
+		return fmt.Errorf("no activity found"), ""
 	}
 	data := ""
 	for _, event := range events {
@@ -24,7 +24,8 @@ func Formatter(events []Event) error {
 			data = fmt.Sprintf("created %s in %s ", event.Payload.RefType, event.Repo.Name)
 
 		default:
-			data = fmt.Sprintf("%s ")
+			data = fmt.Sprintf("%s occured in % s", event.Type, event.Repo.Name)
 		}
 	}
+	return nil, data
 }
