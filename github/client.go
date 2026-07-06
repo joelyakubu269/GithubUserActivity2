@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func fetchUserActivity(username string) ([]Event, error) {
+func FetchUserActivity(username string) ([]Event, error) {
 	url := fmt.Sprintf(
 		"https://api.github.com/users/%s/events",
 		username,
@@ -17,7 +17,7 @@ func fetchUserActivity(username string) ([]Event, error) {
 	if err != nil {
 		return nil, fmt.Errorf("github user activity %w", err)
 	}
-	resp.Body.Close()
+
 	switch resp.StatusCode {
 	case http.StatusOK:
 	case http.StatusNotFound:
@@ -29,6 +29,7 @@ func fetchUserActivity(username string) ([]Event, error) {
 	}
 	var events []Event
 	err = json.NewDecoder(resp.Body).Decode(&events)
+	resp.Body.Close()
 	if err != nil {
 		return nil, err
 	}
