@@ -1,7 +1,10 @@
-# GithubUserActivity2
 # GitHub User Activity CLI
+https://roadmap.sh/projects/personal-blog
 
-A simple command-line application written in Go that fetches and displays the recent public activity of any GitHub user using the GitHub REST API.
+
+A simple command-line application written in Go that fetches and displays the recent public activity ocreated branch in creatorMujih/asciiArtWeb  at 2026-07-01T15:44:44Z
+pushed commits to creatorMujih/asciiArt
+created branch in creatorMujih/asciiArt  at 2026-07-01T15:01:05Zf any GitHub user using the GitHub REST API.
 
 This project was built to practice:
 
