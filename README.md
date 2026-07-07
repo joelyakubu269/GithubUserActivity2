@@ -1,5 +1,5 @@
 # GitHub User Activity CLI
-https://roadmap.sh/projects/personal-blog
+https://roadmap.sh/projects/github-user-activity
 
 
 A simple command-line application written in Go that fetches and displays the recent public activity ocreated branch in creatorMujih/asciiArtWeb  at 2026-07-01T15:44:44Z
